@@ -98,7 +98,7 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   /* background: rgba(255, 255, 255, 0.1);  스크롤바 뒷 배경 색상 */
-  background: #FDF5F5;
+  background: #fff;
 }
 
 
@@ -238,9 +238,12 @@ section.page1 {
   /* margin-bottom: 25px; */
   transform: rotate(-90deg);
 }
-.header_inner>.contact>a {
-  font-size: 1rem;
+.header_inner>.contact>button {
+  font-size: 1.5rem;
   font-family: 'Cairo-ExtraLight';
+  /* 초기화 */
+  background: inherit ; border:none; box-shadow:none;
+  border-radius:0; padding:0; overflow:visible; cursor:pointer
 }
 
 /* main */
@@ -422,6 +425,17 @@ p.txt {
   background: #333;
   /* transform: rotate(-90deg); */
 }
+.page3_inner>div.line:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #333;
+}
+
 .page3_inner>.content {
   display: flex;
   /* align-items: center; */
@@ -620,6 +634,16 @@ p.txt {
   height: 100%;
   background: #333;
   /* transform: rotate(-90deg); */
+}
+.page5_inner>div.line:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #333;
 }
 
 /* 키워드 style */
@@ -1233,13 +1257,23 @@ p.txt {
   font-family: 'Cairo-ExtraLight';
   font-size: 120px;
 }
-.page6>h4:after {
+.page6>h4:before {
   content: "";
   position: absolute;
   top: 120px;
   left: 40px;
   width: calc(100% - 1150px);
   height: 0.5px;
+  background: #333;
+}
+.page6>h4:after {
+  content: "";
+  position: absolute;
+  top: 117px;
+  left: 718px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   background: #333;
 }
 
