@@ -856,7 +856,7 @@ p.txt {
   /* border: 1px solid #626262; */
   border-radius: 50%;
   text-align: center;
-  animation:ani 1.3s infinite alternate;
+  animation: ani 1.3s infinite alternate;
 }
 @keyframes ani{
   0%{transform:translate(0,0);}
@@ -1296,11 +1296,25 @@ p.txt {
   font-size: 22px;
 }
 .page6>.contact_info>.profile>ul>li>dl>dd {
+  position: relative;
   font-size: 25px;
+  text-indent: 1rem;
+}
+.page6>.contact_info>.profile>ul>li>dl>dd:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 2PX;
+  width: 7px;
+  height: 7px;
+  background: #333;
+  border-radius: 50%;
 }
 .page6>.contact_info>.profile>ul>li>dl>dd>span {
+  display: block;
   font-size: 22px;
   opacity: 60%;
+  text-indent: 1rem;
 }
 
 /* 메일버튼 */
