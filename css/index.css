@@ -1234,14 +1234,13 @@ p.txt {
   font-size: 120px;
 }
 .page6>h4:after {
-  /* content: "";
+  content: "";
   position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 10px);
+  top: 120px;
+  left: 40px;
+  width: calc(100% - 1150px);
   height: 0.5px;
-  background: #333; */
+  background: #333;
 }
 
 /* 프로필 */
