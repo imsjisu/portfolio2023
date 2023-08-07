@@ -644,6 +644,9 @@ p.txt {
   font-family: 'Pretendard-ExtraLight';
   opacity: 50%;
 }
+.page5_inner>.keywords>span p {
+  line-height: 1.5;
+}
 
 /* HTML */
 .page5_inner>.keywords>span:first-of-type {
