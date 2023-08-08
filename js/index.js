@@ -1,66 +1,50 @@
+// main  로드 이벤트
+let header = document.getElementById("header");
+let mainVideo = document.querySelector("div.video");
+let mainTitle = document.querySelector("div.title");
+let mainTxt1 = document.querySelector(".main_txt>span:first-of-type");
+let mainTxt2 = document.querySelector(".main_txt>span:last-of-type");
 
-
-// 스크롤 시 header 고정
-const header = document.getElementById('header');
-
-
-document.addEventListener('scroll', () => {
-  let scroll = window.scrollY;
-  // console.log(scroll);
-  if (scroll <= 0) {
-    header.classList.remove('active');
-  } else {
-  header.classList.add('active');
-  }
-});
-
-let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll(".gnb li a"); //메뉴 링크
-//window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
-window.addEventListener("scroll", cursor);
-window.addEventListener("mousemove", cursor);
-//커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
-function cursor(e) {
-  mouseCursor.style.left = e.pageX - scrollX + "px";
-  mouseCursor.style.top = e.pageY - scrollY + "px";
+window.onload = function() {
+  header.classList.add("on");
+  mainVideo.classList.add("on");
+  mainTitle.classList.add("on");
+  mainTxt1.classList.add("on");
+  mainTxt2.classList.add("on");
 }
 
 
-const contents = document.querySelectorAll(".section-group");
-const sections = document.querySelectorAll(".section-group>section.section");
-// const lis = document.querySelectorAll("aside>.quick>li");
-console.log(sections);
+// 사이트 컨텐츠 휠이벤트
+function wheel (element){
+  for(let i=0; i<siteTrain.length; i++){
+    element[i].parentElement.classList.add("on");
+  }
+}
 
-// 윈도우 높이값을 가져와서 (body값은 모든 컨텐츠의 높이이기 때문에 안됨)
-// #container > div 높이값으로 지정
-// 윈도우 resize가 돼도 동일하게 적용
-let devWidth = window.innerWidth;
-console.log(devWidth);
+let innerTitleLine = document.querySelector("div.line");
+let danggn = document.querySelector(".danggn");
+let hermes = document.querySelector(".hermes");
+let binggrae = document.querySelector(".binggrae");
+let ralph = document.querySelector(".ralph");
 
-window.addEventListener("resize", () => {
-  devWidth = window.innerWidth;
+let html = document.querySelector(".page5_inner>.keywords>span:first-of-type");
+
+document.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  console.log(scroll)
+
+  if(scroll >= 1180 && scroll < 1300) {
+    innerTitleLine.classList.add("on");
+  } else if(scroll >= 1300 && scroll < 1600){
+    danggn.classList.add("on");
+  } else if(scroll >= 1700 && scroll < 2100){
+    hermes.classList.add("on");
+  } else if(scroll >= 2100 && scroll < 2674){
+    binggrae.classList.add("on");
+  } else if(scroll >= 2674){
+    ralph.classList.add("on");
+  } else if(scroll >=3400) {
+    html.classList.add("on");
+  }
 })
 
-for (let i=0; i<contents.length; i++) {
-  contents[i].style.width = `${devWidth}px`;
-}
-
-// 🌐함수 (prev, next 2가지에 사용)
-function wheelEvent(scrTop) {
-  window.scroll({
-    top: scrTop,
-    left: 0,
-    behavior: "smooth"
-  });
-
-    for(let k=0; k<sections.length; k++){
-      if(scrTop >= k*devWidth && scrTop < (k+1)*devWidth) {
-        
-        // section(컨텐츠)에 on지웠다가 붙여라
-        sections.forEach(item => {
-          item.classList.remove("on");
-        })
-        sections[k].classList.add("on");
-      }
-    }
-  }
