@@ -492,9 +492,11 @@ p.txt {
 .page3_inner>.content {
   display: flex;
   /* align-items: center; */
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  gap: 22%;
   width: 100%;
   height: 100%;
+  /* padding: 40px; */
 }
 
 /* 공통 style */
@@ -504,28 +506,40 @@ p.txt {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 380px;
-  height: 570px;
+  width: 370px;
+  height: 530px;
   background: #fff;
   border-radius: 300px;
   gap: 35px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+  cursor: auto;
+  z-index: -10;
+}
+.project_txt.on {
+  opacity: 1;
+  transform: translateX(110%);
+  z-index: -10;
 }
 
-.danggn>.project_txt>.project_txt_logo>img {
+.danggn>.danggn_inner>.project_txt>.project_txt_logo>img {
   width: 190px;
 }
 .hermes>.hermes_inner>.project_txt>.project_txt_logo>img {
   width: 100px;
 }
-.binggrae>.project_txt>.project_txt_logo>img {
+.binggrae>.binggrae_inner>.project_txt>.project_txt_logo>img {
   width: 150px;
 }
 .ralph>.ralph_inner>.project_txt>.project_txt_logo>img {
   width: 220px;
 }
-
-.project_txt>.project_txt_exp {}
-.project_txt>.project_txt_exp>p {}
+.project_txt_exp>p {
+  line-height: 1.8;
+  font-size: 17px;
+  font-weight: 500;
+}
 .project_txt_exp>p>span {
   display: block;
   width: 250px;
@@ -588,23 +602,47 @@ p.txt {
 .page3_inner>.content>.danggn {
   display: flex;
   gap: 40px;
-  width: 61.5%;
-  height: 575px;
-  margin-left: 6%;
-  /* opacity: 0; */
+  width: 40%;
+  height: 550px;
+  margin-left: 9%;
+  opacity: 0;
   transform: translateY(-10%);
   transition: all .5s ease-in-out;
-  border: 1px solid black;
 }
 .page3_inner>.content>.danggn.on {
   opacity: 1;
   transform: translateY(0);
 }
-.page3_inner>.content>.danggn>img {
+/* .page3_inner>.content>.danggn>img {
   display: block;
   width: 380px;
   height: 570px;
   border-radius: 300px 300px 300px 300px;
+  cursor: pointer;
+}
+.page3_inner>.content>.danggn>img.on {
+  width: 380px;
+  height: 570px;
+  background: url(../img/danggn.png) no-repeat;
+  background-size: contain;
+  z-index: 10;
+} */
+
+.page3_inner>.content>.danggn>.danggn_inner {
+  width: 370px;
+  height: 530px;
+  background: url(../img/danggn_blur.png);
+  background-size: contain;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: all .7s ease;
+  z-index: 10;
+}
+.page3_inner>.content>.danggn>.danggn_inner.color {
+  width: 370px;
+  height: 530px;
+  background: url(../img/danggn.png);
+  background-size: contain;
 }
 
 
@@ -612,10 +650,11 @@ p.txt {
 .page3_inner>.content>.hermes {
   width: 60%;
   height: 100%;
-  margin-left: 7%;
+  /* margin-left: 7%; */
   opacity: 0;
   transform: translateY(10%);
   transition: all .5s ease-in-out;
+  /* border: 1px solid red; */
 }
 .page3_inner>.content>.hermes.on {
   opacity: 1;
@@ -623,16 +662,20 @@ p.txt {
 }
 .page3_inner>.content>.hermes>.hermes_inner {
   display: flex;
-   margin-top: 210px;
+  width: 370px;
+  height: 530px;
+  margin-top: 270px;
+  border-radius: 300px;
+  cursor: pointer;
+  background: url(../img/hermes_blur.png) no-repeat;
+  background-size: contain;
+  transition: all .7s ease;
 }
-.page3_inner>.content>.hermes>.hermes_inner>img {
-  width: 400px;
-  height: 600px;
-  border-radius: 0 300px 300px 300px;
-  border-radius: 300px 300px 300px 300px;
-}
-.page3_inner>.content>.hermes>.hermes_inner>.project_txt {
-  padding-left: 40px;
+.page3_inner>.content>.hermes>.hermes_inner.color {
+  width: 370px;
+  height: 530px;
+  background: url(../img/hermes.png) no-repeat;
+  background-size: contain;
 }
 
 
@@ -642,7 +685,6 @@ p.txt {
   padding: 40px;
 }
 .page4_inner {
-
   width: 100%;
   height: 100%;
 }
@@ -659,8 +701,8 @@ p.txt {
   display: flex;
   gap: 40px;
   width: 44%;
-  height: 600px;
-  margin-left: 3%;
+  height: 530px;
+  margin-left: 2%;
   opacity: 0;
   transform: translateY(-10%);
   transition: all .5s ease-in-out;
@@ -669,18 +711,29 @@ p.txt {
   opacity: 1;
   transform: translateY(0);
 }
-.page4_inner>.content>.binggrae>img {
-  width: 400px;
-  height: 600px;
-  border-radius: 300px 300px 0 300px;
-  border-radius: 300px 300px 300px 300px;
+
+.page4_inner>.content>.binggrae>.binggrae_inner {
+  width: 370px;
+  height: 530px;
+  background: url(../img/binggrae_mockup_blur.png) no-repeat;
+  background-size: contain;
+  border-radius: 300px;
+  cursor: pointer;
+  transition: all .7s ease;
+  z-index: 10;
+}
+.page4_inner>.content>.binggrae>.binggrae_inner.color {
+  width: 370px;
+  height: 530px;
+  background: url(../img/binggrae_mockup_.png) no-repeat;
+  background-size: contain;
 }
 
 /* 랄프로렌 */
 .page4_inner>.content>.ralph {
   width: 42%;
   height: 100%;
-  margin-left: 6%;
+  /* margin-left: 22%; */
   opacity: 0;
   transform: translateY(10%);
   transition: all .5s ease-in-out;
@@ -693,14 +746,22 @@ p.txt {
   display: flex;
    margin-top: 210px;
 }
-.page4_inner>.content>.ralph>.ralph_inner>img {
-  width: 400px;
-  height: 600px;
-  border-radius: 0 300px 300px 300px;
-    border-radius: 300px 300px 300px 300px;
+.page4_inner>.content>.ralph>.ralph_inner {
+  display: flex;
+  width: 370px;
+  height: 530px;
+  margin-top: 270px;
+  border-radius: 300px;
+  cursor: pointer;
+  background: url(../img/ralph_mockup_blur.png) no-repeat;
+  background-size: contain;
+  transition: all .7s ease;
 }
-.page4_inner>.content>.ralph>.ralph_inner>.project_txt {
-  padding-left: 40px;
+.page4_inner>.content>.ralph>.ralph_inner.color {
+  width: 370px;
+  height: 530px;
+  background: url(../img/ralph_mockup_.png) no-repeat;
+  background-size: contain;
 }
 
 
