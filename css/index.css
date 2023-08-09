@@ -10,6 +10,9 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+/* font-family: 'Cairo', sans-serif; */
+
 @font-face {
   font-family: 'Pretendard-Thin';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
@@ -126,17 +129,17 @@ body::-webkit-scrollbar-track {
 } */
 
 .section-group--1>.page3 {
-  background: #E5E7EB;
+  background: #e9ebed;
 }
 .section-group--1>.page4 {
-  background: #E5E7EB;
+  background: #e9ebed;
   /* background-image: linear-gradient(to right, #FDF5F5, #F3ECF6); */
 }
 .section-group--1>.page5 {
-  background: #E5E7EB;
+  background: #e9ebed;
 }
 .section-group--2>.page6 {
-  background: #E5E7EB;
+  background: #e9ebed;
   /* background-image: linear-gradient(to bottom, #F3ECF6, #fffde7); */
 }
 
@@ -224,7 +227,7 @@ section.page1.on {
   display: inline-block;
   width: 32px;
   height: 32px;
-  background: url(../img/menu_line.svg) no-repeat;
+  background: url(../img/menu.svg) no-repeat 50%;
   background-size: contain;
   text-indent: -9999vw;
   /* background: #fff; */
@@ -406,7 +409,7 @@ section.page2 {
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
-  background-image: linear-gradient(to right, white, #E5E7EB);
+  background-image: linear-gradient(to right, white, #e9ebed);
 }
 
 .page2>p.txt {
@@ -429,6 +432,10 @@ section.page2 {
   opacity: 0.05;
   transition: all 1s ease;
 }
+/* discriminatory 왼쪽으로 붙이기 */
+.page2>p.txt>span:nth-of-type(6) {
+  margin-left: -2rem;
+}
 .page2>p.txt>span:first-of-type.on,
 .page2>p.txt>span:nth-of-type(2).on,
 .page2>p.txt>span:nth-of-type(3).on,
@@ -441,7 +448,14 @@ section.page2 {
 .page2>p.txt>span:last-of-type.on {
   opacity: 1;
 }
-
+.page2>p.txt>span:nth-of-type(5).on,
+.page2>p.txt>span:nth-of-type(6).on {
+  background: linear-gradient(to right top, #5a94dc, #7add75);
+  color: transparent;
+  -webkit-background-clip: text;
+  /* font-family: 'Cairo', sans-serif; */
+  font-weight: 500;
+}
 /* .page2>p.txt>span.on {
   opacity: 1;
 } */
@@ -1541,7 +1555,7 @@ section.page2 {
   /* font-weight: 900; */
   backdrop-filter: blur(50px);
   /* background-color: #fff; */
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   /* animation: marquee 30s linear infinite; */
 }
 .marquee {
@@ -1631,7 +1645,9 @@ section.page2 {
 /* 프로필 */
 .page6>.container>.page6_inner>.contact_info>.profile {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  /* justify-content: space-around; */
+  gap: 250px;
   align-items: center;
   width: 100%;
   height: 400px;
@@ -1643,7 +1659,6 @@ section.page2 {
   display: flex;
   flex-direction: column;
   gap: 90px;
-
 }
 
 .page6>.container>.page6_inner>.contact_info>.profile>ul>li>dl {}
@@ -1671,7 +1686,6 @@ section.page2 {
 .page6>.container>.page6_inner>.contact_info>.profile>ul>li>dl>dd>span {
   display: block;
   font-size: 20px;
-  opacity: 80%;
   text-indent: 1rem;
 }
 
