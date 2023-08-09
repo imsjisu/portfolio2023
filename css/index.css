@@ -613,14 +613,14 @@ section.page2 {
 .danggn .pj_content>.pj_txt>h4 {
   width: 248px;
   height: 69px;
-  text-indent: -9999px;
+  text-indent: -999999px;
   background: url(../img/danggn_logo.svg) no-repeat;
   background-size: contain;
 }
 .hermes .pj_content>.pj_txt>h4 {
   width: 248px;
   height: 69px;
-  text-indent: -9999px;
+  text-indent: -999999px;
   background: url(../img/hermes_logo.svg) no-repeat;
   background-size: contain;
 }
@@ -697,7 +697,7 @@ section.page2 {
   border-radius: 50%;
   border:none; box-shadow:none;
   padding:0; overflow:visible; cursor:pointer;
-  text-indent: -9999px;
+  text-indent: -999999px;
 }
 .pagination>li>button.active {
   background-color: #333;
