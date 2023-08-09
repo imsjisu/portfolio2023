@@ -1,148 +1,527 @@
-// main  로드 이벤트
-let header = document.getElementById("header");
-let mainVideo = document.querySelector("div.video");
-let mainTitle = document.querySelector("div.title");
-let mainTxt1 = document.querySelector(".main_txt>span:first-of-type");
-let mainTxt2 = document.querySelector(".main_txt>span:last-of-type");
+<!DOCTYPE html>
+<html lang="ko">  <!-- style="overflow-y:hidden !important"-->
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="img/heart_3d.png"/>
+<link rel="apple-touch-icon" href="img/heart_3d.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOOK FOR ME !</title>
 
-window.onload = function() {
-  header.classList.add("on");
-  mainVideo.classList.add("on");
-  mainTitle.classList.add("on");
-  mainTxt1.classList.add("on");
-  mainTxt2.classList.add("on");
-}
+<!-- css -->
+<link rel="stylesheet" href="css/loading.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+
+<!-- script -->
+<script defer src="js/index.js"></script>
+<!-- <script  src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+
+<!-- wrap -->
+<div id="wrap">
+  <!-- <div class="preload">
+    <img src="img/load_bg.png" alt="" >
+  </div> -->
+
+  <!-- 첫번째 구간 (좌->우) -->
+  <div class="section-group section-group--horizontal-left section-group--1">
+    <!-- 1 페이지 -->
+    <section class="section page1">
+      <!-- <div class="cursor"></div> -->
+      <header id="header">
+        <!-- header_wrap -->
+        <div class="header_wrap">
+          <!-- header_inner -->
+          <div class="header_inner">
+            <!-- 로고 텍스트 -->
+            <h1><a href="index.html">JISU<span>PORTFOLIO</span></a></h1>
+            
+            <!-- nav -->
+            <nav id="nav">
+              <h2 class="menu"><a href="#">전체 메뉴</a></h2>
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">WORK-PIECE</a></li>
+                <li><a href="#">KEYWORD</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+            </nav>
+
+            <span class="contact"><button>CONTACT</button></span>
+          </div>
+          <!-- // header_inner -->
+        </div>
+        <!-- // header_wrap -->
+      </header>
+      <!-- // header -->
+
+      <!-- mian 텍스트 부분 -->
+      <div class="main_txt">
+        <span>Scroll and</span>
+        <span>Look at the right!</span>
+        <div class="video">
+          <video preload="auto" autoplay loop muted>
+            <source src="video/nucleate-hero.mp4">
+          </video>
+          <div class="title">
+            <h2>
+              <span>STEADILY<br /></span>
+              <span>FULL &nbsp;GROWING<br /></span>
+              <span>WEB &nbsp;DEVELOPER</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- // mian 텍스트 부분 -->
+    </section>
+    <!-- // 1 페이지 -->
+
+    <!-- 2 페이지 -->
+    <section class="section page2">
+      <p class="txt">
+        <span>Hope</span>
+        <span>an</span>
+        <span>equal</span><br />
+        <span>and</span>
+        <span>non-</span>
+        <span>discriminatory</span><br />
+        <span>user</span>
+        <span>experience</span><br />
+        <span>for</span>
+        <span>everyone.</span>
+      </p>
+      <p>누구에게나 동등하고 차별 없는 사용자 경험을 희망합니다.<br />
+        웹표준에 맞춘 시멘틱 마크업을 통해 탄탄하고 유연한 웹구조를 지향합니다.<br />
+        효율적으로 정의하는 CSS, 사용자의 시선을 이끄는 다양한 Javascript 인터렉션을 추구합니다.</p>
+    </section>
+    <!-- // 2 페이지 -->
+    
+    <!-- 3 페이지 -->
+    <section class="section page3">
+      <div class="page3_inner">
+        <div class="line">
+          <div class="inner_title">WORK-PIECE</div>
+        </div>
+
+        <!-- 컨텐츠 기차 -->
+        <div class="pj_train">
+
+          <!-- 당근마켓 전체 -->
+          <div class="danggn">
+            <!-- 당근마켓 이너 전체 -->
+            <div class="pj_inner">
+              <div class="pj_title">
+                <h3>Danggn Market</h3>
+                <span>당근마켓 공식 사이트 리뉴얼</span>
+              </div>
+
+              <!-- 당근마켓 우측 컨텐츠 전체 -->
+              <div class="pj_content">
+                <img src="img/dg_mockup.png" alt="당근마켓 목업">
+
+                <!-- 우측 텍스트 전체 -->
+                <div class="pj_txt">
+                  <h4>당근마켓</h4>
+                  
+                  <div class="pj_detail">
+                    <!-- 타입 ~ 디스크립션 -->
+                    <ul>
+                      <li>
+                        <dl>
+                          <dt>Type</dt>
+                          <dd>팀 프로젝트 (기여도 : 50%)</dd>
+                        </dl>
+                      </li>
+
+                      <li>
+                        <dl>
+                          <dt>Description</dt>
+                          <dd><strong>· </strong>기존 사이트의 정적인 레이아웃과 UI/UX 개선 제안
+                          <dd><strong>· </strong>브랜드 아이덴티티를 살리고 다양한 타겟층의 접근성 고려
+                          <dd><strong>· </strong>1920px 적응형 웹페이지
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                    <!-- // 타입 ~ 디스크립션 -->
+                  </div>
+
+                  <div class="pj_btn">
+                    <ul>
+                      <li><a href="#">VIEW</a></li>
+                      <li><a href="#">VALIDATION TEST</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <!-- // 우측 텍스트 전체 -->
+
+              </div>
+              <!-- // 당근마켓 우측 컨텐츠 전체 -->
+            </div>
+            <!-- // 당근마켓 이너 전체 -->
+          </div>
+          <!-- // 당근마켓 전체 -->
+
+          <!-- 에르메스 전체 -->
+          <div class="hermes">
+            <!-- 에르메스 이너 전체 -->
+            <div class="pj_inner">
+              <div class="pj_title">
+                <h3>Hermes</h3>
+                <span>에르메스 공식 사이트 리뉴얼</span>
+              </div>
+
+              <!-- 에르메스 우측 컨텐츠 전체 -->
+              <div class="pj_content">
+                <img src="img/hr_mockup.svg" alt="에르메스 목업">
+
+                <!-- 우측 텍스트 전체 -->
+                <div class="pj_txt">
+                  <h4>에르메스</h4>
+                  
+                  <div class="pj_detail">
+                    <!-- 타입 ~ 디스크립션 -->
+                    <ul>
+                      <li>
+                        <dl>
+                          <dt>Type</dt>
+                          <dd>개인 프로젝트 (기여도 : 100%)</dd>
+                        </dl>
+                      </li>
+
+                      <li>
+                        <dl>
+                          <dt>Description</dt>
+                          <dd><strong>· </strong>하이엔드 명품 브랜드인 에르메스의
+                          <dd><strong>· </strong>오랜 전통과 장인정신에 포인트를 둔 리뉴얼
+                          <dd><strong>· </strong>반응형 웹페이지 (PC, Mobile)
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                    <!-- // 타입 ~ 디스크립션 -->
+                  </div>
+
+                  <div class="pj_btn">
+                    <ul>
+                      <li><a href="#">VIEW</a></li>
+                      <li><a href="#">VALIDATION TEST</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <!-- // 우측 텍스트 전체 -->
+
+              </div>
+              <!-- // 에르메스 우측 컨텐츠 전체 -->
+            </div>
+            <!-- // 에르메스 이너 전체 -->
+          </div>
+          <!-- // 에르메스 전체 -->
 
 
-// 2페이지 텍스트 opacity 변경
-let opacityTxt1 = document.querySelector(".page2>p.txt>span:first-of-type");
-let opacityTxt2 = document.querySelector(".page2>p.txt>span:nth-of-type(2)");
-let opacityTxt3 = document.querySelector(".page2>p.txt>span:nth-of-type(3)");
-let opacityTxt4 = document.querySelector(".page2>p.txt>span:nth-of-type(4)");
-let opacityTxt5 = document.querySelector(".page2>p.txt>span:nth-of-type(5)");
-let opacityTxt6 = document.querySelector(".page2>p.txt>span:nth-of-type(6)");
-let opacityTxt7 = document.querySelector(".page2>p.txt>span:nth-of-type(7)");
-let opacityTxt8 = document.querySelector(".page2>p.txt>span:nth-of-type(8)");
-let opacityTxt9 = document.querySelector(".page2>p.txt>span:nth-of-type(9)");
-let opacityTxt10 = document.querySelector(".page2>p.txt>span:last-of-type");
-console.log(opacityTxt9);
 
-document.addEventListener("scroll", () => {
-  let scroll = window.scrollY;
-  console.log(scroll)
+        </div>
+        <!-- // 컨텐츠 기차 -->
 
-  if(scroll >= 300 && scroll < 360) {
-    opacityTxt1.classList.add("on");
-  } else if(scroll >= 360 && scroll < 420){
-    opacityTxt2.classList.add("on");
-  } else if(scroll >= 420 && scroll < 480){
-    opacityTxt3.classList.add("on");
-  } else if(scroll >= 480 && scroll < 540){
-    opacityTxt4.classList.add("on");
-  } else if(scroll >= 540 && scroll < 600){
-    opacityTxt5.classList.add("on");
-  } else if(scroll >= 600 && scroll < 660){
-    opacityTxt6.classList.add("on");
-  } else if(scroll >= 660 && scroll < 720){
-    opacityTxt7.classList.add("on");
-  } else if(scroll >= 720 && scroll < 780){
-    opacityTxt8.classList.add("on");
-  } else if(scroll >= 780 && scroll < 840){
-    opacityTxt9.classList.add("on");
-  } else if(scroll >= 840){
-    opacityTxt10.classList.add("on");
-  }
-})
+        <!-- 페이지네이션 -->
+        <ul class="pagination">
+          <li><button>1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>4</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 페이지 -->
+    <section class="section page4">
+      <div class="page4_inner">
+        <div class="content">
+          <!-- 빙그레 -->
+          <div class="binggrae">
+            <!-- <img src="img/binggrae_mockup_.png" alt="binggrae"> -->
+            <div class="binggrae_inner">
+              <div class="project_txt">
+                <div class="project_txt_logo">
+                  <img src="img/binggrae_logo.png" alt="binggrae logo">
+                </div>
+                <div class="project_txt_exp">
+                  <p><span>빙그레 공식 홈페이지 클론코딩</span><br />
+                    · 개인 프로젝트 &#40;기여도 &#58; 100&#37;&#41;<br />
+                    · 메인, 투자정보, 고객센터 페이지 클론코딩<br />
+                    · 반응형 웹페이지 &#40;PC, Tablet, Mobile&#41;</p>
+                </div>
+                <!-- <div class="project_txt_tag">
+                  <ul>
+                    <li><p>responsive</p></li>
+                    <li><p>clone</p></li>
+                    <li><p>main</p></li>
+                  </ul>
+                  <ul>
+                    <li><p>sub</p></li>
+                    <li><p>PC</p></li>
+                    <li><p>Tablet</p></li>
+                    <li><p>Mobile</p></li>
+                  </ul>
+                </div> -->
+                <div class="project_txt_btn">
+                  <ul>
+                    <li><a href="#">VIEW</a></li>
+                    <li><a href="#">VALIDATION TEST</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 빙그레 -->
+
+          <!-- 랄프로렌 -->
+          <div class="ralph">
+            <!-- ralph_inner -->
+            <div class="ralph_inner">
+              <!-- <img src="img/ralph_mockup_.png" alt="ralph"> -->
+              <div class="project_txt">
+                <div class="project_txt_logo">
+                  <img src="img/ralph_logo.svg" alt="ralph logo">
+                </div>
+                <div class="project_txt_exp">
+                  <p><span>랄프로렌 공식 앱 디자인</span><br />
+                    · 개인 프로젝트 &#40;기여도 &#58; 100&#37;&#41;<br />
+                    · (디자인 완료 시 작성 예정)<br /></p>
+                </div>
+                <!-- <div class="project_txt_tag">
+                  <ul>
+                    <li><p>responsive</p></li>
+                    <li><p>renewal</p></li>
+                    <li><p>main</p></li>
+                  </ul>
+                  <ul>
+                    <li><p>PC</p></li>
+                    <li><p>Mobile</p></li>
+                  </ul>
+                </div> -->
+                <div class="project_txt_btn">
+                  <ul>
+                    <li><a href="#">VIEW</a></li>
+                    <li><a href="#">VALIDATION TEST</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- // ralph_inner -->
+          </div>
+          <!-- // 랄프로렌 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 페이지 -->
+    <section class="section page5">
+
+      <div class="page5_inner">
+        <div class="line">
+          <div class="inner_title">KEYWORD</div>
+        </div>
+        <div class="keywords">
+          <span class="on"><button>HTML</button>
+            <div class="inner">
+              <p>웹표준에 맞는 시멘틱 마크업을<br />
+                통해 탄탄한 웹구조를 설계합니다.</p>
+            </div>
+          </span>
+          <span><button>FIGMA</button>
+            <div class="inner">
+              <p>컴포넌트, 프로토타입을 활용하여<br />
+                UI&#47;UX를 디자인 합니다.</p>
+            </div>
+          </span>
+          <span><button>COMMUNICATION</button>
+            <div class="inner">
+              <p>업무 시 구성원간의<br />
+                소통을 중시합니다.</p>
+            </div>
+          </span>
+          <span><button>INTERACTION</button>
+            <div class="inner">
+              <p>사용자와의 상호작용을 고려하여<br />
+                적절한 동적효과를 적용합니다.</p>
+            </div>
+          </span>
+          <span><button>ILLUSTRATOR</button>
+            <div class="inner">
+              <p>로고 및 아이콘 제작, 캐릭터 아트 등<br />
+                벡터 이미지를 작업합니다.</p>
+            </div>
+          </span>
+          <span><button>GROWING</button>
+            <div class="inner">
+              <p>-<br />
+                -</p>
+            </div>
+          </span>
+          <span><button>PHOTOSHOP</button>
+            <div class="inner">
+              <p>사진 합성 및 보정, 이미지의 편집과<br />
+                다양한 툴을 활용한 작업을 합니다.</p>
+            </div>
+          </span>
+          <span><button>CSS</button>
+            <div class="inner">
+              <p>디자인 요소를 배치하고 미디어쿼리를<br />
+                이용한 반응형 웹페이지를 제작합니다.</p>
+            </div>
+          </span>
+          <span><button>JQUERY</button>
+            <div class="inner">
+              <p>라이브러리를 활용하여<br />
+                다양한 동적효과를 적용합니다.</p>
+            </div>
+          </span>
+          <span><button>JAVASCRIPT</button>
+            <div class="inner">
+              <p>바닐라 자바스크립트를 활용하여<br />
+                동적효과를 적용합니다.</p>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
 
 
-// 슬라이드 전체 크기(height 구하기)
-const train = document.querySelector("ul.pagination");
-let paginationHeight = train.clientHeight;
-console.log(paginationHeight);
+  <!-- 두번째 구간 (상->하) -->
+  <div class="section-group section-group--vertical-up section-group--2">
+    <section class="section page6">
+      <div class="container">
+        <div class="video">
+          <video preload="auto" autoplay loop muted>
+            <source src="video/nucleate-hero.mp4">
+          </video>
+        </div>
+        <div class="page6_inner">
+          <h4>LET'S GET IN TOUCH!</h4>
+          <div class="contact_info">
+            <!-- profile -->
+            <div class="profile">
+              <ul>
+                <li>
+                  <dl>
+                    <dt>NAME</dt>
+                    <dd>성지수</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>EXPERIENCE</dt>
+                    <dd>쿠팡&#40;주&#41;<br /><span>&#40;2017. 08 - 2022. 09&#41;</span></dd>
+                  </dl>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>TITLE</dt>
+                    <dd>내용</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>EDUCATION</dt>
+                    <dd>스마트 웹콘텐츠 UI&#47;UX 디자인 &amp; 프론트엔드 과정 수료<br /><span>&#40;2023. 02 - 2023. 08&#41;</span></dd>
+                  </dl>
+                </li>
+              </ul>
+    
+              <!-- 메일버튼 -->
+              <div class="email">
+                <a href="mailto:wltnsung@gmail.com" >Click to send email!</a>
+                <div class="email_bg"></div>
+              </div>
+    
+              <!-- // 메일버튼 -->
+            </div>
+            <!-- // profile -->
+    
+            <!-- copyright -->
+            <div class="copyright">
+              <p>© 2023. Sung Ji Su Co. all rights reserved.</p>
+            </div>
+            <!-- // copyright -->
+    
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-// 버튼 엘리먼트 선택하기
-// const prevBtn = document.querySelector(".slide_prev_button");
-// const nextBtn = document.querySelector(".slide_next_button");
 
-// 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
-const slideLis = document.querySelectorAll("ul.pagination>li>button");
-// 현재 슬라이드 위치가 슬라이드 개수를 넘기지 않게 하기 위한 변수
-const maxSlide = slideLis.length;
+  <!-- 세번째 구간 (좌->우) -->
+  <!-- <div class="section-group section-group--horizontal-left section-group--3">
+    <section class="section section--16">섹션16</section>
+  </div> -->
 
-// 버튼 클릭할 때 마다 현재 슬라이드가 어디인지 알려주기 위한 변수
-// let currSlide = 1;
 
-// 페이지네이션 생성
-const pagination = document.querySelector(".slide_pagination");
+</div>
 
-for (let i = 0; i < maxSlide; i++) {
-  if (i === 0) pagination.innerHTML += `<li class="active">•</li>`;
-  else pagination.innerHTML += `<li>•</li>`;
-}
+<!-- script -->
+<script>
+// $(window).load(function() {
+//   $('.preload').delay('3000').fadeOut();
+// });
 
-const paginationItems = document.querySelectorAll(".slide_pagination > li");
-console.log(paginationItems);
 
-// 버튼 엘리먼트에 클릭 이벤트 추가하기
-nextBtn.addEventListener("click", () => {
-  // 이후 버튼 누를 경우 현재 슬라이드를 변경
-  currSlide++;
-  // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위해서
-  if (currSlide <= maxSlide) {
-    // 슬라이드를 이동시키기 위한 offset 계산
-    const offset = slideWidth * (currSlide - 1);
-    // 각 슬라이드 아이템의 left에 offset 적용
-    slideItems.forEach((i) => {
-      i.setAttribute("style", `left: ${-offset}px`);
+gsap.registerPlugin(ScrollTrigger);
+
+function SectionGroup__init() {
+  $('.section-group--horizontal-right').each(function(index, node) {
+    var $group = $(node);
+    var $section = $group.find(' > .section');
+
+    gsap.to($section, {
+      xPercent: 100 * ($section.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: $group,
+        start: "top top",
+        end: "+=" + ($section.length - 1) + "00%",
+        pin: true,
+        scrub: true,
+        // markers: true
+      }
     });
-    // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
-  } else {
-    currSlide--;
-  }
-});
-// 버튼 엘리먼트에 클릭 이벤트 추가하기
-prevBtn.addEventListener("click", () => {
-  // 이전 버튼 누를 경우 현재 슬라이드를 변경
-  currSlide--;
-  // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
-  if (currSlide > 0) {
-    // 슬라이드를 이동시키기 위한 offset 계산
-    const offset = slideWidth * (currSlide - 1);
-    // 각 슬라이드 아이템의 left에 offset 적용
-    slideItems.forEach((i) => {
-      i.setAttribute("style", `left: ${-offset}px`);
-    });
-    // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
-  } else {
-    currSlide++;
-  }
-});
-
-// 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
-window.addEventListener("resize", () => {
-  slideWidth = slide.clientWidth;
-});
-
-// 각 페이지네이션 클릭 시 해당 슬라이드로 이동하기
-for (let i = 0; i < maxSlide; i++) {
-  // 각 페이지네이션마다 클릭 이벤트 추가하기
-  paginationItems[i].addEventListener("click", () => {
-    // 클릭한 페이지네이션에 따라 현재 슬라이드 변경해주기(currSlide는 시작 위치가 1이기 때문에 + 1)
-    currSlide = i + 1;
-    // 슬라이드를 이동시키기 위한 offset 계산
-    const offset = slideWidth * (currSlide - 1);
-    // 각 슬라이드 아이템의 left에 offset 적용
-    slideItems.forEach((i) => {
-      i.setAttribute("style", `left: ${-offset}px`);
-    });
-    // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide - 1].classList.add("active");
   });
+
+  $('.section-group--horizontal-left').each(function(index, node) {
+    var $group = $(node);
+    var $section = $group.find(' > .section');
+
+    gsap.to($section, {
+      xPercent: -100 * ($section.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: $group,
+        start: "top top",
+        end: "+=" + ($section.length - 1) + "00%",
+        pin: true,
+        scrub: true,
+        // markers: true
+      }
+    });
+  });
+
 }
+SectionGroup__init();
 
 
+</script>
+
+</body>
+</html>
