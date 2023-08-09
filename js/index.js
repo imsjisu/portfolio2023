@@ -56,11 +56,11 @@ document.addEventListener("scroll", () => {
 
 
 // 사이트 컨텐츠 휠이벤트
-function wheel (element){
-  for(let i=0; i<siteTrain.length; i++){
-    element[i].parentElement.classList.add("on");
-  }
-}
+// function wheel (element){
+//   for(let i=0; i<siteTrain.length; i++){
+//     element[i].parentElement.classList.add("on");
+//   }
+// }
 
 // 브랜드 이미지
 let innerTitleLine = document.querySelector("div.line");
