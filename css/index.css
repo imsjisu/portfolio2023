@@ -286,7 +286,6 @@ span.menu>h2>a {
   width: 100%;
   height: 100%;
   padding: 5rem 13rem;
-  border: 1px solid orange;
 }
 .nav_inner>.nav_header {
   display: flex;
