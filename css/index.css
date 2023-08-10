@@ -624,6 +624,20 @@ section.page2 {
   background: url(../img/hermes_logo.svg) no-repeat;
   background-size: contain;
 }
+.binggrae .pj_content>.pj_txt>h4 {
+  width: 290px;
+  /* height: 56.75px; */
+  text-indent: -999999px;
+  background: url(../img/binggrae_logo.png) no-repeat;
+  background-size: contain;
+}
+.ralph .pj_content>.pj_txt>h4 {
+  width: 248px;
+  height: 69px;
+  text-indent: -999999px;
+  background: url(../img/ralph_logo.svg) no-repeat;
+  background-size: contain;
+}
 
 
 .pj_content>.pj_txt>.pj_detail>ul {}
@@ -710,6 +724,12 @@ section.page2 {
 /* 에르메스 */
 
 
+/* 빙그레 */
+
+
+/* 랄프로렌 */
+
+
 /* 4 페이지 */
 .section-group--1>.page4 {
   width: 100%;
@@ -727,73 +747,6 @@ section.page2 {
 }
 
 
-/* 빙그레 */
-.page4_inner>.content>.binggrae {
-  display: flex;
-  gap: 40px;
-  width: 44%;
-  height: 530px;
-  margin-left: 2%;
-  opacity: 0;
-  transform: translateY(-10%);
-  transition: all .5s ease-in-out;
-}
-.page4_inner>.content>.binggrae.on {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.page4_inner>.content>.binggrae>.binggrae_inner {
-  width: 370px;
-  height: 530px;
-  background: url(../img/binggrae_mockup_blur.png) no-repeat;
-  background-size: contain;
-  border-radius: 300px;
-  cursor: pointer;
-  transition: all .7s ease;
-  z-index: 10;
-}
-.page4_inner>.content>.binggrae>.binggrae_inner.color {
-  width: 370px;
-  height: 530px;
-  background: url(../img/binggrae_mockup_.png) no-repeat;
-  background-size: contain;
-}
-
-/* 랄프로렌 */
-.page4_inner>.content>.ralph {
-  width: 42%;
-  height: 100%;
-  /* margin-left: 22%; */
-  opacity: 0;
-  transform: translateY(10%);
-  transition: all .5s ease-in-out;
-}
-.page4_inner>.content>.ralph.on {
-  opacity: 1;
-  transform: translateY(0);
-}
-.page4_inner>.content>.ralph>.ralph_inner {
-  display: flex;
-   margin-top: 210px;
-}
-.page4_inner>.content>.ralph>.ralph_inner {
-  display: flex;
-  width: 370px;
-  height: 530px;
-  margin-top: 270px;
-  border-radius: 300px;
-  cursor: pointer;
-  background: url(../img/ralph_mockup_blur.png) no-repeat;
-  background-size: contain;
-  transition: all .7s ease;
-}
-.page4_inner>.content>.ralph>.ralph_inner.color {
-  width: 370px;
-  height: 530px;
-  background: url(../img/ralph_mockup_.png) no-repeat;
-  background-size: contain;
-}
 
 
 /* 5 페이지 */
