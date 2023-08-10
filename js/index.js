@@ -27,6 +27,18 @@ closeBtn.addEventListener("click", (e) => {
 })
 
 
+// 2페이지 텍스트 나타나기
+let showTxt = document.querySelector(".page2>p.txt");
+
+document.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  console.log(scroll);
+
+  if(scroll >= 290) {
+    showTxt.classList.add("on");
+  } 
+})
+
 // 2페이지 텍스트 opacity 변경
 let opacityTxt1 = document.querySelector(".page2>p.txt>span:first-of-type");
 let opacityTxt2 = document.querySelector(".page2>p.txt>span:nth-of-type(2)");
