@@ -40,7 +40,7 @@
   <!-- 첫번째 구간 (좌->우) -->
   <div class="section-group section-group--horizontal-left section-group--1">
     <!-- 1 페이지 -->
-    <section class="section page1">
+    <section class="section page1" id="home">
       <!-- <div class="cursor"></div> -->
       <header id="header">
         <!-- header_wrap -->
@@ -55,7 +55,7 @@
               <h2 class="menu"><a href="#">전체 메뉴</a></h2>
             </span>
 
-            <span class="contact"><button>ICON?</button></span>
+            <span class="contact"><button>BLAH</button></span>
           </div>
           <!-- // header_inner -->
         </div>
@@ -88,10 +88,10 @@
           <!-- nav_list -->
           <div class="nav_list">
             <ul>
-              <li><button>HOME</button></li>
-              <li><button>WORK-PIECE</button></li>
-              <li><button>KEYWORD</button></li>
-              <li><button>CONTACT</button></li>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="#workpiece">WORK-PIECE</a></li>
+              <li><a>KEYWORD</a></li>
+              <li><a>GET IN TOUCH</a></li>
             </ul>
           </div>
           <!-- // nav_list -->
@@ -104,7 +104,7 @@
                 <li><a href="mailto:wltnsung@gmail.com">wltnsung@gmail.com</a></li>
                 <li>© 2023. Sung Ji Su Co. all rights reserved.</li>
               </ul>
-              <span>blah blah blah blah</span>
+              <span>Thank you for your visit!</span>
             </div>
           </div>
           <!-- // nav_foot -->
@@ -153,7 +153,7 @@
     <!-- // 2 페이지 -->
     
     <!-- 3 페이지 -->
-    <section class="section page3">
+    <section class="section page3" id="workpiece">
       <!-- page3_inner 전체 -->
       <div class="page3_inner">
         <div class="line">
@@ -205,7 +205,7 @@
 
                   <div class="pj_btn">
                     <ul>
-                      <li><a href="#">VIEW</a></li>
+                      <li><a href="https://jiyxxn.github.io/daangn/index.html" target="_blank">VIEW</a></li>
                       <li><a href="#">VALIDATION TEST</a></li>
                     </ul>
                   </div>
@@ -251,7 +251,7 @@
                         <dl>
                           <dt>Description</dt>
                           <dd><strong>· </strong>하이엔드 명품 브랜드인 에르메스의
-                          <dd><strong>· </strong>오랜 전통과 장인정신에 포인트를 둔 리뉴얼
+                          <dd>오랜 전통과 장인정신에 포인트를 둔 리뉴얼
                           <dd><strong>· </strong>반응형 웹페이지 (PC, Mobile)
                           </dd>
                         </dl>
@@ -459,8 +459,9 @@
           </span>
           <span><button>CSS</button>
             <div class="inner">
-              <p>디자인 요소를 배치하고 미디어쿼리를<br />
-                이용한 반응형 웹페이지를 제작합니다.</p>
+              <p>디자인 요소를 배치하고<br />
+                미디어쿼리를 이용한 반응형<br />
+                웹페이지를 제작합니다.</p>
             </div>
           </span>
           <span><button>JQUERY</button>
@@ -567,23 +568,23 @@
 gsap.registerPlugin(ScrollTrigger);
 
 function SectionGroup__init() {
-  $('.section-group--horizontal-right').each(function(index, node) {
-    var $group = $(node);
-    var $section = $group.find(' > .section');
+  // $('.section-group--horizontal-right').each(function(index, node) {
+  //   var $group = $(node);
+  //   var $section = $group.find(' > .div');
 
-    gsap.to($section, {
-      xPercent: 100 * ($section.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: $group,
-        start: "top top",
-        end: "+=" + ($section.length - 1) + "00%",
-        pin: true,
-        scrub: true,
-        // markers: true
-      }
-    });
-  });
+  //   gsap.to($section, {
+  //     xPercent: 100 * ($section.length - 1),
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: $group,
+  //       start: "top top",
+  //       end: "+=" + ($section.length - 1) + "00%",
+  //       pin: true,
+  //       scrub: true,
+  //       // markers: true
+  //     }
+  //   });
+  // });
 
   $('.section-group--horizontal-left').each(function(index, node) {
     var $group = $(node);
@@ -591,7 +592,7 @@ function SectionGroup__init() {
 
     gsap.to($section, {
       xPercent: -100 * ($section.length - 1),
-      ease: "none",
+      ease: 'none',
       scrollTrigger: {
         trigger: $group,
         start: "top top",
