@@ -695,6 +695,14 @@ section.page2 {
   color: #fff;
 }
 
+/* 랄프로렌 모바일 목업 */
+.ralph>.pj_inner>.pj_content>img {
+  display: block;
+  width: 500px;
+  height: 709px;
+}
+
+
 /* 페이지네이션 스타일 */
 .pagination {
   display: flex;
