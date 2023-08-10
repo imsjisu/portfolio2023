@@ -13,6 +13,19 @@ window.onload = function() {
   mainTxt2.classList.add("on");
 }
 
+// nav 클릭이벤트
+const navBtn = document.querySelector(".menu");
+const nav = document.getElementById("nav");
+const closeBtn = document.querySelector(".btn_close>button");
+console.log(closeBtn);
+
+navBtn.addEventListener("click", (e) => {
+  nav.classList.add("on");
+})
+closeBtn.addEventListener("click", (e) => {
+  nav.classList.remove("on");
+})
+
 
 // 2페이지 텍스트 opacity 변경
 let opacityTxt1 = document.querySelector(".page2>p.txt>span:first-of-type");
@@ -64,9 +77,8 @@ $(document).ready(function() {
     autoplay: false,
     vertial: true,
     infinite: false,
-    speed: 400,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   })
 });
-
