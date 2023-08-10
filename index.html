@@ -20,9 +20,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
+<!-- 당근에서 썼던 슬릭 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- 버티컬 슬릭 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
 
 </head>
 <body>
@@ -297,7 +301,7 @@
 
               <!-- 랄프로렌 컨텐츠 전체 -->
               <div class="pj_content">
-                <img src="img/rl_mockup.png" alt="랄프로렌 목업">
+                <img src="img/rl_mockup2.png" alt="랄프로렌 목업">
 
                 <!-- 우측 우측 텍스트 전체 -->
                 <div class="pj_txt">
@@ -326,8 +330,7 @@
 
                   <div class="pj_btn">
                     <ul>
-                      <li><a href="#">VIEW</a></li>
-                      <li><a href="#">VALIDATION TEST</a></li>
+                      <li><a href="#">DESIGN VIEW</a></li>
                     </ul>
                   </div>
 
@@ -348,7 +351,7 @@
 
         <!-- 페이지네이션 -->
         <ul class="pagination">
-          <li><button>1</button></li>
+          <li><button class="active">1</button></li>
           <li><button>2</button></li>
           <li><button>3</button></li>
           <li><button>4</button></li>
@@ -507,6 +510,8 @@
 
 </div>
 
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
 <!-- script -->
 <script>
 // $(window).load(function() {
@@ -555,6 +560,14 @@ function SectionGroup__init() {
 
 }
 SectionGroup__init();
+
+// var swiper = new Swiper(".pj_train", {
+//   direction: "vertical",
+//   pagination: {
+//     el: ".pagination",
+//     clickable: true,
+//   },
+// });
 
 
 </script>
