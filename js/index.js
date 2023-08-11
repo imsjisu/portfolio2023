@@ -79,6 +79,21 @@ document.addEventListener("scroll", () => {
   }
 })
 
+// 2페이지 한글 텍스트 효과
+// const SEC  = 0.5;
+// function clip_text(dom){
+//     const childs = dom.children;
+//     for(let i=0; i<childs.length; i++){
+//         childs[i].style.animationDelay = `${SEC * i}s`
+//         childs[i].classList.add('on');
+//     }
+// }
+ 
+// /* ✨ 실행 */
+// const test = document.getElementById('txt_wrapp');
+ 
+// clip_text(test);
+
 
 // 프로젝트 컨텐츠 배너
 $(document).ready(function() {
@@ -94,3 +109,24 @@ $(document).ready(function() {
     slidesToScroll: 1,
   })
 });
+
+
+// 웹접근성 검사 버튼 클릭 이벤트
+
+// 당근마켓
+
+// 빙그레
+const bgVali = document.querySelector(".binggrae_vali");
+const bgValiBtn = document.querySelector(".binggrae .pj_btn>ul>li:nth-of-type(2)>a");
+const bgValiClose = document.querySelector(".btn_vali_close>button")
+console.log(bgValiBtn);
+
+bgValiBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  bgVali.classList.add("on");
+  bgValiClose.classList.add("on");
+})
+bgValiClose.addEventListener("click", (e) => {
+  bgVali.classList.remove("on");
+  bgValiClose.classList.remove("on");
+})
