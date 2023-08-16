@@ -31,7 +31,16 @@
 </head>
 <body>
 
+<!-- mobile wrap -->
+
 <!-- wrap -->
+<div id="m_wrap">
+
+</div>
+<!-- // mobile wrap -->
+
+
+<!-- pc wrap -->
 <div id="wrap">
   <!-- <div class="preload">
     <img src="img/load_bg.png" alt="" >
@@ -65,6 +74,7 @@
 
       <!-- 네비게이션 -->
       <nav id="nav">
+        <!-- nav_inner -->
         <div class="nav_inner">
           <!-- nav_header -->
           <div class="nav_header">
@@ -89,32 +99,33 @@
           <div class="nav_list">
             <ul>
               <li><a href="index.html">HOME</a></li>
-              <li><a href="page3.html">WORK-PIECE</a></li>
-              <li><a>KEYWORD</a></li>
-              <li><a>GET IN TOUCH</a></li>
+              <li><a href="javascript:window.scrollTo( 0, 1846 );">WORK-PIECE</a></li>
+              <li><a href="javascript:window.scrollTo( 0, 2770 );">GET IN TOUCH</a></li>
             </ul>
           </div>
           <!-- // nav_list -->
 
           <!-- nav_foot -->
           <div class="nav_foot">
-            <div class="nav_profile">
-              <ul>
-                <li>Seoul, Korea</li>
-                <li><a href="mailto:wltnsung@gmail.com">wltnsung@gmail.com</a></li>
-                <li>© 2023. Sung Ji Su Co. all rights reserved.</li>
-              </ul>
-              <span>Thank you for your visit!</span>
-            </div>
+            <ul>
+              <li>Seoul, Korea</li>
+              <li><a href="mailto:wltnsung@gmail.com">wltnsung@gmail.com</a></li>
+            </ul>
+            <span>© 2023. Sung Ji Su Co. all rights reserved.</span>
+            <span>Thank you for your visit!</span>
           </div>
           <!-- // nav_foot -->
         </div>
+        <!-- // nav_inner -->
+
+        <div class="nav_bottom"></div>
       </nav>
 
       <!-- mian 텍스트 부분 -->
       <div class="main_txt">
-        <span>Scroll and</span>
-        <span>Look at the right!</span>
+        <div class="scroll_right">
+          <span>Scroll and Look at the right!</span>
+        </div>
         <div class="video">
           <video preload="auto" autoplay loop muted>
             <source src="video/nucleate-hero.mp4">
@@ -146,21 +157,75 @@
         <span>for</span>
         <span>everyone.</span>
       </p>
-      <ul id="txt_wrapp" class="txt_wrap">
-        <li>누구에게나 동등하고 차별 없는 사용자 경험을 희망합니다.<br /></li>
-        <li>웹표준에 맞춘 시멘틱 마크업을 통해 탄탄하고 유연한 웹구조를 지향합니다.<br /></li>
+      <ul class="txt_wrap on">
+        <li>누구에게나 동등하고 차별 없는 사용자 경험을 희망합니다.</li>
+        <li>웹표준에 맞춘 시멘틱 마크업을 통해 탄탄하고 유연한 웹구조를 지향합니다.</li>
         <li>효율적으로 정의하는 CSS, 사용자의 시선을 이끄는 다양한 Javascript 인터렉션을 추구합니다.</li>
       </ul>
     </section>
     <!-- // 2 페이지 -->
     
     <!-- 3 페이지 -->
-    <section class="section page3">
+    <section class="section page3" id="workpiece">
       <!-- page3_inner 전체 -->
       <div class="page3_inner">
         <div class="line">
           <div class="inner_title">WORK-PIECE</div>
         </div>
+
+        <div class="move_menu on">
+          <button><span>MENU</span></button>
+        </div>
+
+        <!-- move_nav -->
+        <div class="move_nav">
+          <!-- nav_inner -->
+          <div class="nav_inner">
+            <!-- nav_header -->
+            <div class="nav_header">
+              <div class="icon">
+                <ul>
+                  <li><a href="https://github.com/imsjisu" target="_blank">GITHUB</a></li>
+                  <li><a href="mailto:wltnsung@gmail.com">EMAIL</a></li>
+                </ul>
+              </div>
+  
+              <div class="nav_logo">
+                <a href="index.html">J I S U<span>PORTFOLIO</span></a>
+              </div>
+  
+              <div class="btn_close">
+                <button>CLOSE</button>
+              </div>
+            </div>
+            <!-- // nav_header -->
+  
+            <!-- nav_list -->
+            <div class="nav_list">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="javascript:window.scrollTo( 0, 1846 );">WORK-PIECE</a></li>
+                <li><a href="javascript:window.scrollTo( 0, 2770 );">GET IN TOUCH</a></li>
+              </ul>
+            </div>
+            <!-- // nav_list -->
+  
+            <!-- nav_foot -->
+            <div class="nav_foot">
+              <ul>
+                <li>Seoul, Korea</li>
+                <li><a href="mailto:wltnsung@gmail.com">wltnsung@gmail.com</a></li>
+              </ul>
+              <span>© 2023. Sung Ji Su Co. all rights reserved.</span>
+              <span>Thank you for your visit!</span>
+            </div>
+            <!-- // nav_foot -->
+          </div>
+          <!-- // nav_inner -->
+
+          <div class="move_nav_bottom"></div>
+        </div>
+        <!-- // move_nav -->
 
         <!-- 컨텐츠 기차 -->
         <div class="pj_train">
@@ -171,7 +236,7 @@
             <div class="pj_inner">
               <div class="pj_title">
                 <h3>Danggn Market</h3>
-                <span>당근마켓 공식 사이트 리뉴얼</span>
+                <span>Project 1. 당근마켓 공식 사이트 리뉴얼</span>
               </div>
 
               <!-- 당근마켓 컨텐츠 전체 -->
@@ -220,6 +285,15 @@
               <!-- // 당근마켓 컨텐츠 전체 -->
             </div>
             <!-- // 당근마켓 이너 전체 -->
+
+            <!-- 웹접근성 검사 -->
+            <div class="btn_vali_close"><button>웹접근성 검사 닫기</button></div>
+            <div class="danggn_vali">
+              <img src="img/bg_vali_01.png" alt="당근마켓 웹접근성 검사 이미지 1">
+              <img src="img/bg_vali_02.png" alt="당근마켓 웹접근성 검사 이미지 2">
+              <img src="img/bg_vali_03.png" alt="당근마켓 웹접근성 검사 이미지 3">
+            </div>
+            <!-- // 웹접근성 검사 -->
           </div>
           <!-- // 당근마켓 전체 -->
 
@@ -229,7 +303,7 @@
             <div class="pj_inner">
               <div class="pj_title">
                 <h3>Hermes</h3>
-                <span>에르메스 공식 사이트 리뉴얼</span>
+                <span>Project 2. 에르메스 공식 사이트 리뉴얼</span>
               </div>
 
               <!-- 에르메스 컨텐츠 전체 -->
@@ -286,7 +360,7 @@
             <div class="pj_inner">
               <div class="pj_title">
                 <h3>Binggrae</h3>
-                <span>빙그레 공식 사이트 클론코딩</span>
+                <span>Project 3. 빙그레 공식 사이트 클론코딩</span>
               </div>
 
               <!-- 빙그레 컨텐츠 전체 -->
@@ -342,65 +416,9 @@
               <img src="img/bg_vali_02.png" alt="빙그레 웹접근성 검사 이미지 2">
               <img src="img/bg_vali_03.png" alt="빙그레 웹접근성 검사 이미지 3">
             </div>
+            <!-- // 웹접근성 검사 -->
           </div>
-          <!-- // 웹접근성 검사 -->
           <!-- // 빙그레 전체 -->
-
-          <!-- 랄프로렌 전체 -->
-          <div class="ralph">
-            <!-- 랄프로렌 이너 전체 -->
-            <div class="pj_inner">
-              <div class="pj_title">
-                <h3>Ralph Lauren</h3>
-                <span>랄프로렌 공식 앱 디자인</span>
-              </div>
-
-              <!-- 랄프로렌 컨텐츠 전체 -->
-              <div class="pj_content">
-                <img src="img/rl_mockup2.png" alt="랄프로렌 목업">
-
-                <!-- 우측 우측 텍스트 전체 -->
-                <div class="pj_txt">
-                  <h4>랄프로렌</h4>
-                  
-                  <div class="pj_detail">
-                    <!-- 타입 ~ 디스크립션 -->
-                    <ul>
-                      <li>
-                        <dl>
-                          <dt>Type</dt>
-                          <dd>개인 프로젝트 (기여도 : 100%)</dd>
-                        </dl>
-                      </li>
-
-                      <li>
-                        <dl>
-                          <dt>Description</dt>
-                          <dd><strong>· </strong>(디자인 완료 시 작성 예정)
-                          </dd>
-                        </dl>
-                      </li>
-                    </ul>
-                    <!-- // 타입 ~ 디스크립션 -->
-                  </div>
-
-                  <div class="pj_btn">
-                    <ul>
-                      <li><a href="#">DESIGN VIEW</a></li>
-                    </ul>
-                  </div>
-
-                </div>
-                <!-- // 우측 텍스트 전체 -->
-
-              </div>
-              <!-- // 랄프로렌 컨텐츠 전체 -->
-            </div>
-            <!-- // 랄프로렌 이너 전체 -->
-          </div>
-          <!-- // 랄프로렌 전체 -->
-
-
 
         </div>
         <!-- // 컨텐츠 기차 -->
@@ -410,7 +428,7 @@
           <li><button></button></li>
           <li><button></button></li>
           <li><button></button></li>
-          <li><button></button></li>
+          <!-- <li><button></button></li> -->
         </ul>
 
       </div>
@@ -420,84 +438,68 @@
     <!-- 4 페이지 -->
     <!-- <section class="section page4"></section> -->
 
-    <!-- 5 페이지 -->
-    <section class="section page5">
-
-      <div class="page5_inner">
-        <div class="line">
-          <div class="inner_title">KEYWORD</div>
-        </div>
-        <div class="keywords">
-          <span class="on"><button>HTML</button>
-            <div class="inner">
-              <p>웹표준에 맞는 시멘틱 마크업을<br />
-                통해 탄탄한 웹구조를 설계합니다.</p>
-            </div>
-          </span>
-          <span><button>FIGMA</button>
-            <div class="inner">
-              <p>컴포넌트, 프로토타입을 활용하여<br />
-                UI&#47;UX를 디자인 합니다.</p>
-            </div>
-          </span>
-          <span><button>COMMUNICATION</button>
-            <div class="inner">
-              <p>업무 시 구성원간의<br />
-                소통을 중시합니다.</p>
-            </div>
-          </span>
-          <span><button>INTERACTION</button>
-            <div class="inner">
-              <p>사용자와의 상호작용을 고려하여<br />
-                적절한 동적효과를 적용합니다.</p>
-            </div>
-          </span>
-          <span><button>ILLUSTRATOR</button>
-            <div class="inner">
-              <p>로고, 아이콘 제작 등<br />
-                벡터 이미지를 작업합니다.</p>
-            </div>
-          </span>
-          <span><button>RESPONSIBILITY</button>
-            <div class="inner">
-              <p>좋아하는 일이라면 포기하지 않고<br />
-                끝까지 책임지기 위해 노력합니다.</p>
-            </div>
-          </span>
-          <span><button>PHOTOSHOP</button>
-            <div class="inner">
-              <p>사진 합성 및 보정, 이미지의 편집과<br />
-                다양한 툴을 활용한 작업을 합니다.</p>
-            </div>
-          </span>
-          <span><button>CSS</button>
-            <div class="inner">
-              <p>디자인 요소를 배치하고<br />
-                미디어쿼리를 이용한 반응형<br />
-                웹페이지를 제작합니다.</p>
-            </div>
-          </span>
-          <span><button>JQUERY</button>
-            <div class="inner">
-              <p>라이브러리를 활용하여<br />
-                다양한 동적효과를 적용합니다.</p>
-            </div>
-          </span>
-          <span><button>JAVASCRIPT</button>
-            <div class="inner">
-              <p>바닐라 자바스크립트를 활용하여<br />
-                동적효과를 적용합니다.</p>
-            </div>
-          </span>
-        </div>
-      </div>
-    </section>
   </div>
 
 
   <!-- 두번째 구간 (상->하) -->
   <div class="section-group section-group--vertical-up section-group--2">
-    <section class="section page6">
+    <section class="section page6" id="getintouch">
+
+      <div class="move_menu">
+        <button><span>MENU</span></button>
+      </div>
+
+        <!-- move_nav -->
+        <div class="move_nav">
+          <!-- nav_inner -->
+          <div class="nav_inner">
+            <!-- nav_header -->
+            <div class="nav_header">
+              <div class="icon">
+                <ul>
+                  <li><a href="https://github.com/imsjisu" target="_blank">GITHUB</a></li>
+                  <li><a href="mailto:wltnsung@gmail.com">EMAIL</a></li>
+                </ul>
+              </div>
+  
+              <div class="nav_logo">
+                <a href="index.html">J I S U<span>PORTFOLIO</span></a>
+              </div>
+  
+              <div class="btn_close">
+                <button>CLOSE</button>
+              </div>
+            </div>
+            <!-- // nav_header -->
+  
+            <!-- nav_list -->
+            <div class="nav_list">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="javascript:window.scrollTo( 0, 1846 );">WORK-PIECE</a></li>
+                <li><a href="javascript:window.scrollTo( 0, 2770 );">KEYWORD</a></li>
+                <li><a href="javascript:window.scrollTo( 0, 3692 );">GET IN TOUCH</a></li>
+              </ul>
+            </div>
+            <!-- // nav_list -->
+  
+            <!-- nav_foot -->
+            <div class="nav_foot">
+              <div class="nav_profile">
+                <ul>
+                  <li>Seoul, Korea</li>
+                  <li><a href="mailto:wltnsung@gmail.com">wltnsung@gmail.com</a></li>
+                  <li>© 2023. Sung Ji Su Co. all rights reserved.</li>
+                </ul>
+                <span>Thank you for your visit!</span>
+              </div>
+            </div>
+            <!-- // nav_foot -->
+          </div>
+          <!-- // nav_inner -->
+        </div>
+        <!-- // move_nav -->
+
       <div class="container">
         <div class="video">
           <video preload="auto" autoplay loop muted>
@@ -522,6 +524,18 @@
                     <dd>쿠팡&#40;주&#41;<br /><span>&#40;2017. 08 - 2022. 09&#41;</span></dd>
                   </dl>
                 </li>
+                <li>
+                  <dl>
+                    <dt>SKILL</dt>
+                    <dd><span><span>HTML5</span></span>
+                      <span><span>CSS3</span></span>
+                      <span><span>JAVASCRIPT</span></span>
+                      <span><span>JQUERY</span></span>
+                      <span><span>PHOTOSHOP</span></span>
+                      <span><span>ILLUSTRATOR</span></span>
+                      <span><span>FIGMA</span></span></dd>
+                  </dl>
+                </li>
               </ul>
               <ul>
                 <li>
@@ -534,6 +548,13 @@
                   <dl>
                     <dt>EDUCATION</dt>
                     <dd>스마트 웹콘텐츠 UI&#47;UX 디자인 &amp; 프론트엔드 과정 수료<br /><span>&#40;2023. 02 - 2023. 08&#41;</span></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>CERIFICATION</dt>
+                    <dd>2023 GTQ(포토샵) 1급</dd>
+                    <dd>2023 웹디자인기능사</dd>
                   </dl>
                 </li>
               </ul>
@@ -568,6 +589,7 @@
 
 
 </div>
+<!-- // pc wrap -->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
 
