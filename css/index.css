@@ -229,21 +229,23 @@ section.page1.on {
 .header_wrap:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 6vw;
   width: .05rem;
-  height: 100%;
+  height: 92%;
   background: #a8a8a8;
 }
 .header_inner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex: 1;
   gap: 17.5vw;
   height: 100%;
-  padding: 1.5rem;
+  padding: 2.5rem;
+  /* border: 1px solid red; */
 }
 .header_inner>h1 {
 }
@@ -253,8 +255,9 @@ section.page1.on {
   text-align: center;
   margin-left: -.5rem;
   font-family: 'Cairo-ExtraLight';
-  font-size: 1.8rem;
+  font-size: 1.32rem;
   transform: rotate(-90deg);
+  /* border: 1px solid blue; */
 }
 .header_inner>h1>a>span {
   margin-top: -.7rem;
@@ -287,13 +290,8 @@ span.menu>h2>a:hover {
 .header_inner>.contact {
   /* margin-bottom: 25px; */
   transform: rotate(-90deg);
-}
-.header_inner>.contact>button {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-family: 'Cairo-ExtraLight';
-  /* 초기화 */
-  background: inherit ; border:none; box-shadow:none;
-  border-radius:0; overflow:visible; cursor:pointer;
 }
 
 /* 네비게이션 */
@@ -309,11 +307,11 @@ span.menu>h2>a:hover {
   border-radius: 50rem;
   transition: left .8s ease-in-out 0s;
   /* z-index: 1; */
-  animation: navActive 1s;
+  /* animation: navActive 1s; */
 }
 @keyframes navActive {
-  0% {transform: scale(0);}
-  100% {transform: scale(1);}
+  /* 0% {transform: scale(0);}
+  100% {transform: scale(1);} */
 }
 #nav.on {
   /* display: block; */
@@ -330,11 +328,11 @@ span.menu>h2>a:hover {
   border-radius: 50rem;
   transition: left .9s ease-in-out .05s;
   z-index: -1;
-  animation: navActive 2s;
+  /* animation: navActive 2s; */
 }
 @keyframes navActive {
-  0% {transform: scale(0);}
-  100% {transform: scale(1);}
+  /* 0% {transform: scale(0);}
+  100% {transform: scale(1);} */
 }
 .nav_bottom.on {
   /* display: block; */
@@ -708,6 +706,7 @@ section.page2 {
   position:relative;
   overflow:hidden;
   text-align: right;
+  line-height: 1.3;
   font-size: 1.5rem;
 }
 
@@ -762,13 +761,13 @@ section.page2 {
 .page3 .move_nav {
   display: none;
   position: absolute;
-  top: -155vh;
+  top: -205vh;
   left: -2.5rem;
   width: 50vw;
   height: 200vh;
   background: #111111;
   border-radius: 50rem;
-  transition: bottom .8s ease-in-out 0s;
+  transition: height .8s ease-in-out 0s;
   z-index: 1;
   animation: page3NavActive 1s;
 }
@@ -789,7 +788,7 @@ section.page2 {
   height: 200vh;
   background: #111111;
   border-radius: 50rem;
-  transition: bottom .8s ease-in-out 0s;
+  transition: height .8s ease-in-out 0.5s;
   z-index: -1;
   animation: page3NavActive 1s;
 }
@@ -799,7 +798,7 @@ section.page2 {
 }
 .page3 .move_nav_bottom.on {
   display: block;
-  top: -0vh;
+  top: 0vh;
 }
 
 
@@ -813,7 +812,7 @@ section.page2 {
   padding: 5rem 13rem;
   z-index: 1;
   opacity: 0;
-  transition: all .8s linear 1s;
+  transition: all .8s linear 2s;
 }
 .page3 .move_nav>.nav_inner.on {
   opacity: 1;
@@ -1039,7 +1038,7 @@ section.page2 {
   opacity: 70%;
   border-radius: 5rem;
   z-index: -1;
-  box-shadow: 0 .5rem 6rem #dedede;
+  box-shadow: 0 .5rem 1rem #dedede;
 }
 
 .pj_title {
@@ -1081,6 +1080,10 @@ section.page2 {
   width: 49rem;
   margin-top: 1rem;
 }
+.hermes .pj_txt {
+  margin-left: -50px;
+  /* border: 1px solid black; */
+}
 .pj_content>.pj_txt {
   display: flex;
   flex-direction: column;
@@ -1090,7 +1093,7 @@ section.page2 {
 }
 /* 개별 로고 */
 .danggn .pj_content>.pj_txt>h4 {
-  width: 15.5rem;
+  width: 13rem;
   height: 4.3125rem;
   text-indent: -999999px;
   background: url(../img/danggn_logo.svg) no-repeat;
@@ -1763,6 +1766,33 @@ ul.slick-dots>li.slick-active>button#slick-slide-control03 {
   text-indent: 1.2rem;
   /* border: 1px solid black; */
 }
+
+/* phone number */
+.profile>ul:nth-of-type(2)>li:first-of-type>dl {
+  position: relative;
+}
+.profile>ul:nth-of-type(2)>li:first-of-type>dl>dt {}
+.profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:first-of-type {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1.3rem;
+  background: url(../img/phone2.svg) no-repeat;
+  background-size: contain;
+}
+.profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:first-of-type:hover {
+
+}
+.profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:first-of-type>span {
+  opacity: 0;
+}
+.profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:last-of-type {
+  position: absolute;
+  top: 2.6rem;
+  left: 4rem;
+  text-indent: -2rem;
+  border-bottom: .05rem solid #ffffff;
+}
+
 
 /* skill */
 .page6>.container>.page6_inner>.contact_info>.profile>ul:first-of-type>li:last-of-type>dl>dd {
