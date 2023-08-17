@@ -1773,11 +1773,11 @@ ul.slick-dots>li.slick-active>button#slick-slide-control03 {
 }
 .profile>ul:nth-of-type(2)>li:first-of-type>dl>dt {}
 .profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:first-of-type {
-  width: 2rem;
+  /* width: 2rem;
   height: 2rem;
   margin-left: 1.3rem;
   background: url(../img/phone2.svg) no-repeat;
-  background-size: contain;
+  background-size: contain; */
 }
 .profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:first-of-type:hover {
 
@@ -1786,11 +1786,11 @@ ul.slick-dots>li.slick-active>button#slick-slide-control03 {
   opacity: 0;
 }
 .profile>ul:nth-of-type(2)>li:first-of-type>dl>dd:last-of-type {
-  position: absolute;
+  /* position: absolute;
   top: 2.6rem;
   left: 4rem;
   text-indent: -2rem;
-  border-bottom: .05rem solid #ffffff;
+  border-bottom: .05rem solid #ffffff; */
 }
 
 
